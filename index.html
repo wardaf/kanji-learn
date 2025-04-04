@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JLPT Kanji Quiz</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>JLPT Kanji Quiz</h1>
+  </header>
+
+  <main>
+    <section id="levelSelection">
+      <h2>Select JLPT Level</h2>
+      <div class="level-grid">
+        <div class="level-card" data-level="N5">N5</div>
+        <div class="level-card" data-level="N4">N4</div>
+        <div class="level-card" data-level="N3">N3</div>
+      </div>
+    </section>
+
+    <section id="partSelection" class="hidden">
+      <h2>Select Part</h2>
+      <div class="part-grid" id="partList"></div>
+      <button id="backToLevel" class="btn btn-back">Back to Levels</button>
+    </section>
+
+    <section id="learnSection" class="hidden">
+      <h2>Learn Mode</h2>
+      <div class="nav-buttons">
+        <button id="backToPart" class="btn btn-back">Back to Parts</button>
+        <button id="startQuiz" class="btn btn-start">Start Quiz</button>
+      </div>
+      <div class="checkbox-container">
+        <label><input type="checkbox" id="hideRomaji"> Hide Romaji</label>
+        <label><input type="checkbox" id="hideMeaning"> Hide Meaning</label>
+      </div>
+      <div class="kanji-grid" id="kanjiList"></div>
+    </section>
+
+    <section id="quizSection" class="hidden">
+      <h2>Quiz Mode</h2>
+      <div id="quizContent"></div>
+      <button id="backToLearn" class="btn btn-back">Back to Learn</button>
+      <button id="backToLevelFromQuiz" class="btn btn-back">Back to Levels</button>
+      <button id="resetQuiz" class="btn btn-start hidden">Reset Quiz</button>
+    </section>
+  </main>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
